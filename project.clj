@@ -6,4 +6,5 @@
   :dependencies [[org.clojure/clojure "1.6.0"]]
   :user {:signing {:gpg-key "461167D3"}}
   :profiles {:dev {:dependencies [[expectations "2.0.9"]]
-                   :plugins [[lein-autoexpect "1.0"]]}})
+                   :plugins [[lein-autoexpect "1.0"]
+                             [lein-expectations "0.0.8"]]}})

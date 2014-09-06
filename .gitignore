@@ -1,6 +1,6 @@
 /target
 .DS_Store
-.lein-repl-history
-.nrepl-port
+.nrepl*
+.lein*
 pom.xml
 pom.xml.asc
