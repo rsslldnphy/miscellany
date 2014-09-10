@@ -1,7 +1,9 @@
 # Miscellany
 
-[![Build Status](https://travis-ci.org/rsslldnphy/miscellany.svg?branch=master)](https://travis-ci.org/rsslldnphy/miscellany)
 [![Clojars Project](http://clojars.org/miscellany/latest-version.svg)](http://clojars.org/miscellany)
+
+
+[![Build Status](https://travis-ci.org/rsslldnphy/miscellany.svg?branch=master)](https://travis-ci.org/rsslldnphy/miscellany)
 
 A motley assortment of Clojure bits and pieces.
 
