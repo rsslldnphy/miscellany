@@ -1,4 +1,4 @@
-(defproject miscellany "0.0.2"
+(defproject miscellany "0.0.3-SNAPSHOT"
   :description "A motley assortment of Clojure bits and pieces"
   :url "http://github.com/rsslldnphy/miscellany"
   :license {:name "Eclipse Public License"
