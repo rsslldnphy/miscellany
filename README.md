@@ -27,6 +27,15 @@ I find the kind of anonymous functions you often need for, for example, filter p
 (filter (has count > 3) ["cat" "dog" "fish" "tarantula"])
 ```
 
+## miscellany.pipe
+
+Nicks the `|>` operator from the likes of Elixir and F# for a macro very similar to the threading macro, except that it returns an anonymous function rather than applying the forms immediately. As such it is also similar to a version of `comp` that works from left to right - except that it is a macro that accepts a sequence of forms rather than just simply functions. There are thread-first and thread-last (or pipe-first and pipe-last, if you will) versions.
+
+```clojure
+(map (|>  inc (/ 2) str) [1 2 3]) ;; => ("1" "3/2" "2")
+(map (|>> inc (/ 2) str) [1 2 3]) ;; => ("1" "2/3" "1/2")
+```
+
 ## miscellany.lifecycle
 
 Easily add shutdown hooks to you application with `on-shutdown`, or if you'd rather avoid a macro and want to pass a fn, `add-shutdown-hook`.
