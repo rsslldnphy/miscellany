@@ -48,6 +48,15 @@ Easily add shutdown hooks to you application with `on-shutdown`, or if you'd rat
   (fn [] (println "Bye bye.")))
 ```
 
+## miscellany.maybe
+
+Make a function *optional*, i.e. return nil if it passed nil, rather than break. If other arguments are passed to "maybe", they are also passed as arguments when the function is called.
+
+```clojure
+((maybe / 2) 10)  ;; => 5
+((maybe / 2) nil) ;; => nil
+```
+
 ## miscellany.parse
 
 Parse numeric strings as integers with a slightly more forgiving function than Java's Integer constructor.
