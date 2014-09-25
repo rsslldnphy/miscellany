@@ -50,11 +50,12 @@ Easily add shutdown hooks to you application with `on-shutdown`, or if you'd rat
 
 ## miscellany.maybe
 
-Make a function *optional*, i.e. return nil if it passed nil, rather than break. If other arguments are passed to "maybe", they are also passed as arguments when the function is called.
+Make a function *optional*, i.e. return nil if any of the arguments it is passed are nil, rather than break.
 
 ```clojure
-((maybe / 2) 10)  ;; => 5
-((maybe / 2) nil) ;; => nil
+((maybe /) 10   2)  ;; => 5
+((maybe /) nil  2)  ;; => nil
+((maybe /) 10 nil)  ;; => nil
 ```
 
 ## miscellany.parse

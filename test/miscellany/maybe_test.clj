@@ -10,4 +10,9 @@
 
 ;; If "maybe" is passed other arguments, the argument to the returned
 ;; is inserted before them in the function call
-(expect 5 ((maybe / 2) 10))
+(expect 5 ((maybe /) 10 2))
+
+;; If any of the arguments passed to the resulting functions are nil,
+;; nil is returned.
+(expect nil ((maybe /) nil 2))
+(expect nil ((maybe /) 10 nil))
