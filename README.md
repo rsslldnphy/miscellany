@@ -27,6 +27,12 @@ I find the kind of anonymous functions you often need for, for example, filter p
 (filter (has count > 3) ["cat" "dog" "fish" "tarantula"])
 ```
 
+You can also easily combine predicates with `either`:
+
+```clojure
+(filter (either (is even?) (is > 5))) [1 2 3 4 5 6 7 8]
+```
+
 ## miscellany.pipe
 
 Nicks the `|>` operator from the likes of Elixir and F# for a macro very similar to the threading macro, except that it returns an anonymous function rather than applying the forms immediately. As such it is also similar to a version of `comp` that works from left to right - except that it is a macro that accepts a sequence of forms rather than just simply functions. There are thread-first and thread-last (or pipe-first and pipe-last, if you will) versions.

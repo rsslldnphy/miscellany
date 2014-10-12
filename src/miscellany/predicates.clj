@@ -22,3 +22,20 @@
   ;; => [\"fish\" \"tarantula\"]"
   [f pred & args]
   (fn [x] (apply pred (f x) args)))
+
+(defn applicator
+  "Takes a variable number of arguments and returns a function that
+  accepts a function, then applies that function to the arguments
+  passed earlier."
+  [& vs]
+  (fn [f] (apply f vs)))
+
+(defn either
+  "Takes two or more predicates, and returns a predicate
+  that returns true if any of them return true for its argument.
+
+  Typical usage:
+  (filter (either even? (is > 5)) [1 2 3 4 5 6 7 8])
+  ;; => [2 4 5 6 7]"
+  [& ps]
+  (fn [v] (some (applicator v) ps)))
