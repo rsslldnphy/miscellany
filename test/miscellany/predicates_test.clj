@@ -1,5 +1,5 @@
 (ns miscellany.predicates-test
-  (:require [expectations :refer :all]
+  (:require [expectations          :refer :all]
             [miscellany.predicates :refer :all]))
 
 (expect [4 5 6]
