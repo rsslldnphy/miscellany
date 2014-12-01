@@ -22,3 +22,6 @@
 
 ;; trying to parse nil just returns nil
 (expect nil (parse-int nil))
+
+;; parsing an int returns the int
+(expect 2 (parse-int 2))

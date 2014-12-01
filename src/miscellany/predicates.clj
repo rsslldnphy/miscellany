@@ -39,3 +39,8 @@
   ;; => [2 4 5 6 7]"
   [& ps]
   (fn [v] (some (applicator v) ps)))
+
+(def
+  ^{:doc "Returns `true` if its argument is non-nil."}
+  present?
+  (complement nil?))

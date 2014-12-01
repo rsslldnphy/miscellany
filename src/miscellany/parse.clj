@@ -10,8 +10,9 @@
   If the string is nil, nil is returned.
   Any other format raises a NumberFormatException."
   [s]
-  (when s
+  (if (string? s)
     (condp re-matches s
       #"(\d+)\.?\d*" :>> (fn [[_ m]] (Integer. m))
       #"\.\d+"       :>> (constantly 0)
-      (throw (NumberFormatException. (str s " is not a valid number."))))))
+      (throw (NumberFormatException. (str s " is not a valid number."))))
+    s))
