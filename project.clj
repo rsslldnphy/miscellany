@@ -1,10 +1,10 @@
-(defproject miscellany "0.0.3"
+(defproject miscellany "0.0.4"
   :description "A motley assortment of Clojure bits and pieces"
   :url "http://github.com/rsslldnphy/miscellany"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.6.0"]]
-  :signing {:gpg-key "DF49164D"}
+  :signing {:gpg-key "CF73E6ED"}
   :scm {:name "git"
         :url "https://github.com/rsslldnphy/miscellany"}
   :profiles {:dev {:dependencies [[expectations "2.0.9"]]
